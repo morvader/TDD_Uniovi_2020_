@@ -27,4 +27,12 @@ public class FizzBuzzTest {
 
         assertEquals("El código retornado no es correcto","Fizz", retorno);
     }
+
+    @Test
+    public void unMultiploDeCinco_DevuelveBuzz(){
+        int numero = 5;
+        String retorno = fizzBuzz.getFizzBuzzCode(numero);
+
+        assertEquals("El código retornado no es correcto","Buzz", retorno);
+    }
 }
