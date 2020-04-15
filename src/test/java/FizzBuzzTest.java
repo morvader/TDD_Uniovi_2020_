@@ -21,6 +21,14 @@ public class FizzBuzzTest {
     }
 
     @Test
+    public void otroNumeroNormal_DevuelveElNumero(){
+        int numero = 2;
+        String retorno = fizzBuzz.getFizzBuzzCode(numero);
+
+        assertEquals("El código retornado no es correcto","2", retorno);
+    }
+
+    @Test
     public void unMultiploDeTres_DevuelveFizz(){
         int numero = 3;
         String retorno = fizzBuzz.getFizzBuzzCode(numero);
@@ -34,5 +42,13 @@ public class FizzBuzzTest {
         String retorno = fizzBuzz.getFizzBuzzCode(numero);
 
         assertEquals("El código retornado no es correcto","Buzz", retorno);
+    }
+
+    @Test
+    public void unMultiploDeTresYCinco_DevuelveFizzBuzz(){
+        int numero = 15;
+        String retorno = fizzBuzz.getFizzBuzzCode(numero);
+
+        assertEquals("El código retornado no es correcto","FizzBuzz", retorno);
     }
 }
