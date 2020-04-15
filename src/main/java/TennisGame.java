@@ -9,8 +9,14 @@ public class TennisGame {
 
     public String resultadoActual() {
 
-        if(puntosJugador1 == puntosJugador2){
+        if(puntosJugador1 == puntosJugador2 && puntosJugador1 < 3){
             return puntoToString(puntosJugador1) + " iguales";
+        }
+        else if(puntosJugador1 == puntosJugador2 && puntosJugador1 >= 3){
+            return "Deuce";
+        }
+        else if(puntosJugador1 == puntosJugador2 + 1 && puntosJugador1 >= 3){
+            return "Ventaja jugador 1";
         }
         else{
             String resultadoJugador1 = puntoToString(puntosJugador1);

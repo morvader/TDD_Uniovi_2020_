@@ -58,4 +58,41 @@ public class TennisTest {
 
         assertEquals("El resultado al inicio del partido no es nada iguales", resultadoEsperado, resultadoObtenido );
     }
+
+    @Test
+    public void cuandoLosJugadoresEmpatanAMasde3Bolas_EsDeuce() {
+
+        tennisGame.ganaPuntoJugador2();
+        tennisGame.ganaPuntoJugador2();
+        tennisGame.ganaPuntoJugador2();
+
+        tennisGame.ganaPuntoJugador1();
+        tennisGame.ganaPuntoJugador1();
+        tennisGame.ganaPuntoJugador1();
+
+        String resultadoObtenido = tennisGame.resultadoActual();
+        String resultadoEsperado = "Deuce";
+
+        assertEquals("El resultado al inicio del partido no es nada iguales", resultadoEsperado, resultadoObtenido );
+    }
+
+    @Test
+    public void cuandoHayDeuceJugador1HacePunto_VentajaJugador1() {
+
+        tennisGame.ganaPuntoJugador2();
+        tennisGame.ganaPuntoJugador2();
+        tennisGame.ganaPuntoJugador2();
+
+        tennisGame.ganaPuntoJugador1();
+        tennisGame.ganaPuntoJugador1();
+        tennisGame.ganaPuntoJugador1();
+        //DEUCE
+
+        tennisGame.ganaPuntoJugador1();
+
+        String resultadoObtenido = tennisGame.resultadoActual();
+        String resultadoEsperado = "Ventaja jugador 1";
+
+        assertEquals("El resultado al inicio del partido no es nada iguales", resultadoEsperado, resultadoObtenido );
+    }
 }
