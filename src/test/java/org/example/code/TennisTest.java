@@ -1,3 +1,5 @@
+package org.example.code;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -92,6 +94,31 @@ public class TennisTest {
 
         String resultadoObtenido = tennisGame.resultadoActual();
         String resultadoEsperado = "Ventaja jugador 1";
+
+        assertEquals("El resultado al inicio del partido no es nada iguales", resultadoEsperado, resultadoObtenido );
+    }
+
+    @Test
+    public void cuandoHayDeuceJugador2HacePunto_VentajaJugador2() {
+
+        tennisGame.ganaPuntoJugador2();
+        tennisGame.ganaPuntoJugador2();
+        tennisGame.ganaPuntoJugador2();
+        tennisGame.ganaPuntoJugador2();
+        tennisGame.ganaPuntoJugador2();
+
+        tennisGame.ganaPuntoJugador1();
+        tennisGame.ganaPuntoJugador1();
+        tennisGame.ganaPuntoJugador1();
+        tennisGame.ganaPuntoJugador1();
+        tennisGame.ganaPuntoJugador1();
+
+        //DEUCE
+
+        tennisGame.ganaPuntoJugador2();
+
+        String resultadoObtenido = tennisGame.resultadoActual();
+        String resultadoEsperado = "Ventaja jugador 2";
 
         assertEquals("El resultado al inicio del partido no es nada iguales", resultadoEsperado, resultadoObtenido );
     }

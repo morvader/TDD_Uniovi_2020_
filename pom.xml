@@ -16,7 +16,14 @@
             <version>4.13</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.pitest</groupId>
+                <artifactId>pitest-maven</artifactId>
+                <version>1.5.1</version>
+            </plugin>
+        </plugins>
+    </build>
 </project>

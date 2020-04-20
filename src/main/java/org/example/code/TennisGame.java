@@ -1,3 +1,5 @@
+package org.example.code;
+
 public class TennisGame {
     int puntosJugador1;
     int puntosJugador2;
@@ -15,8 +17,11 @@ public class TennisGame {
         else if(puntosJugador1 == puntosJugador2 && puntosJugador1 >= 3){
             return "Deuce";
         }
-        else if(puntosJugador1 == puntosJugador2 + 1 && puntosJugador1 >= 3){
+        else if(puntosJugador1 == puntosJugador2 + 1 && puntosJugador1 >= 4){
             return "Ventaja jugador 1";
+        }
+        else if(puntosJugador1 + 1 == puntosJugador2 && puntosJugador2 >= 4){
+            return "Ventaja jugador 2";
         }
         else{
             String resultadoJugador1 = puntoToString(puntosJugador1);
